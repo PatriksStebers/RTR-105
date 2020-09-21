@@ -22,7 +22,7 @@
 14. mv (file name original) (file name new)
 15. rm (delete file)
 16. ls (key)
-17. 
+17. man (command)
 
 
 
