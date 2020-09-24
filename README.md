@@ -132,4 +132,33 @@ history no 21.  3  ls
    97  LS -LT
    98  ls -lt
    99  history
+   
+   
+   
+   firefox
+    4  le
+    5  ls
+    6  whereis ls
+    7  ls -l
+    8  ls -l /bin/ls
+    9  cat /bin/ls
+   10  tree
+   11  echo $PATH
+   12  nano my_first_shell_script.sh
+   13  ls -lt
+   14  PATH=$PATH:~
+   15  echo $PATH
+   16  ls -l
+   17  /home/user/my_first_shell_script.sh
+   18  chmod 754 my_first_shell_script.sh
+   19  ls -l
+   20  my_first_shell_script.sh 
+   21  ls -l
+   22  ls -lt
+   23  ls ABC/
+   24  ls EFG/
+   25  ls EFG/b.txt
+   26  ls EFG/c.txt
+   27  groups
+
 
