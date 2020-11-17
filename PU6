@@ -1,0 +1,59 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int faktorials_10 ()
+{
+    int fakt=1;
+    for(int i=1;i<=10;i++)
+    {
+        fakt=fakt*i;
+    }
+    return fakt;
+
+}
+int reizinashana (int x, int y)
+{
+    int z=x*y;
+    return z;
+}
+void faktorials_5 ()
+{
+    int fakt=1;
+    for(int i=1;i<=5;i++)
+    {
+        fakt=fakt*i;
+    }
+    cout<<fakt;
+
+}
+void saskaitishana(int x, int y)
+{
+
+    cout<<x+y;
+}
+
+
+int main()
+{
+    int a, b;
+    cout<<"ievadiet 2 skaitlus"<<endl;
+
+    cin>>a>>b;
+
+    cout<<"faktorials skaitlim 10:"<<endl<<faktorials_10();
+
+    cout<<endl;
+    cout<<"ievadito skaitlu reizinajums:"<<endl<<reizinashana(a, b);
+
+    cout<<endl;
+    cout<<"faktorials skaitlim 5:"<<endl;
+    faktorials_5();
+
+    cout<<endl;
+    cout<<"ievadito skaitlu summa:"<<endl;
+    saskaitishana(a, b);
+
+    return 0;
+}
