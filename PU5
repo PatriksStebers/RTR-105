@@ -1,0 +1,70 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+    cout<<"Ludzu ievadiet datu tipu kura glabasiet skaitli"<<"("<<"Int, Char vai long long"<<")"<<endl;
+    cout<<"Ja velaties izveleties long long, ludzu ievadiet longlong bez atstarpes"<<endl;
+    string tips;
+    cin>>tips;
+    cout<<"Ludzu ievadiet skaitli"<<endl;
+
+    if(tips=="int")
+    {
+        int fak=1;
+
+        int sk;
+        cin>>sk;
+        if(sk>12)
+        {
+            cout<<"Nav iespejams aprekinat ar jusu izveleto datu tipu";
+            return 0;
+        }
+        for (int i=1;i<=sk;i++)
+        {
+            fak=fak*i;
+        }
+        cout<<fak;
+
+    }
+    if(tips=="char")
+    {
+        char fak=1;
+        char sk1;
+
+        cin>>sk1;
+        sk1=sk1-'0';
+
+
+        if(sk1>5)
+        {
+            cout<<"Nav iespejams aprekinat ar jusu izveleto datu tipu";
+            return 0;
+        }
+        for (char i=1;i<=sk1;i++)
+        {
+            fak=fak*i;
+        }
+
+        cout<< static_cast<unsigned>(fak);
+    }
+    if(tips=="longlong")
+    {
+        long long fak=1;
+        long long sk2;
+        cin>>sk2;
+        if(sk2>20)
+        {
+            cout<<"Nav iespejams aprekinat ar jusu izveleto datu tipu";
+            return 0;
+        }
+        for (long long i=1;i<=sk2;i++)
+        {
+            fak=fak*i;
+        }
+        cout<<fak;
+    }
+    return 0;
+}
