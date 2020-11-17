@@ -1,0 +1,53 @@
+#include <iostream>
+
+using namespace std;
+
+string fo="";
+int sk=0;
+void KtaisBits(int n, int k)
+{
+   // cout<< n<<" ";
+    sk++;
+    if (n & (1 << (k - 1)))
+       {
+           fo=fo+'1';
+
+       }
+    else
+    {
+        fo=fo+'0';
+    }
+
+    if(sk==8)
+    {
+
+
+        for (int i=fo.length()-1; i>=0; i--)
+        {
+            cout << fo[i];
+        }
+ }
+
+
+}
+int main()
+{
+    unsigned char x;
+    int y;
+    string fo= "";
+    cin>>y;
+    x = y;
+    x = x<<1;
+    fo=fo+"2";
+    for(int i=1;i<=8;i++)
+    {
+        x=x>>1;
+        KtaisBits(x, 1);
+
+       // int j=x;
+      //  cout<<j<<" "<<endl;
+    }
+   // cout<<fo<<endl;
+
+    return 0;
+}
