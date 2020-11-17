@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+    int a[3];
+    cout<<"Ievadiet 3 skaitlus un burtu A, ja gribat sakartot skaitlus augosa seciba, vai D, ja dilstosa";
+    cin>>a[0]>>a[1]>>a[2];
+    char burts;
+    cin>>burts;
+    sort(a, a+3);
+    if(burts=='A')
+    {
+        for(int i=0;i<3;i++)
+        {
+            cout<<a[i]<<" ";
+        }
+    }
+    if(burts=='D')
+    {
+        for(int i=2;i>=0;i--)
+        {
+            cout<<a[i]<<" ";
+        }
+    }
+
+    return 0;
+}
