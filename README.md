@@ -24,6 +24,110 @@
 16. ls (key)
 17. man (command)
 
+###### PU1 uzdevums
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    long long x, y;
+    cout<<"ludzu ievadiet 2 skaitlus:"<<endl;
+    cin>>x>>y;
+    cout<<x <<" * "<< y<<" = "<<x*y;
+
+    return 0;
+}
+
+###### PU2 uzdevums
+#include <iostream>
+
+using namespace std;
+
+string fo="";
+int sk=0;
+void KtaisBits(int n, int k)
+{
+   // cout<< n<<" ";
+    sk++;
+    if (n & (1 << (k - 1)))
+       {
+           fo=fo+'1';
+
+       }
+    else
+    {
+        fo=fo+'0';
+    }
+
+    if(sk==8)
+    {
+
+
+        for (int i=fo.length()-1; i>=0; i--)
+        {
+            cout << fo[i];
+        }
+ }
+
+
+}
+int main()
+{
+    unsigned char x;
+    int y;
+    string fo= "";
+    cin>>y;
+    x = y;
+    x = x<<1;
+    fo=fo+"2";
+    for(int i=1;i<=8;i++)
+    {
+        x=x>>1;
+        KtaisBits(x, 1);
+
+       // int j=x;
+      //  cout<<j<<" "<<endl;
+    }
+   // cout<<fo<<endl;
+
+    return 0;
+}
+
+###### PU3 uzdevums
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main()
+{
+    int a[3];
+    cout<<"Ievadiet 3 skaitlus un burtu A, ja gribat sakartot skaitlus augosa seciba, vai D, ja dilstosa";
+    cin>>a[0]>>a[1]>>a[2];
+    char burts;
+    cin>>burts;
+    sort(a, a+3);
+    if(burts=='A')
+    {
+        for(int i=0;i<3;i++)
+        {
+            cout<<a[i]<<" ";
+        }
+    }
+    if(burts=='D')
+    {
+        for(int i=2;i>=0;i--)
+        {
+            cout<<a[i]<<" ";
+        }
+    }
+
+    return 0;
+}
+###### PU4 uzdevums
+
+
 
 
 
