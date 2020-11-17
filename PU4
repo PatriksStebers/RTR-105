@@ -34,9 +34,9 @@ int main()
     {
         char fak=1;
         char d=0;
-        int j;
-        cin>>j;
-        char sk1=j;
+        char sk1;
+        cin>>sk1;
+        sk1=sk1-'0';
 
         if(sk1>5)
         {
@@ -48,8 +48,8 @@ int main()
             d++;
             fak=fak*d;
         }
-        j=fak;
-        cout<<j;
+
+        cout<<static_cast<unsigned>(fak);
     }
     if(tips=="longlong")
     {
