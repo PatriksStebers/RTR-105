@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<math.h>
+#include<iostream>
+#include <iomanip>
+using namespace std;
+
+double mans_sinuss(double x)
+{
+    long double a, S;
+    int k=2;
+    a = x*x/2;
+
+    S = 1;
+    S=S-a;
+    cout << "a0 = " << fixed<<setprecision(2)<<x <<" " <<"S0 = "<<S <<endl;
+   // cout<<"SEZ  "<<a<<" "<<S<<endl<<endl;
+    int zime=0;
+    while (k<=500){
+        zime++;
+        k=k+2;
+        a = a * x;
+        a=a/k;
+       // cout<<a<<" "<<k<<" "<<k-1<<endl;
+        a=a*x;
+        a=a/(k-1);
+        if(zime%2==1)
+        {
+            a=a*-1;
+        }
+        S=S-a;
+       // cout<<a<<" "<<S<<endl;
+        if(zime%2==1)
+        {
+            a=a*-1;
+        }
+    }
+        cout<<"sin("<<x<<") caur summu: "<< S<<endl;
+
+    return S ;
+}
+int main(){
+
+    double x =-100,y,yy;
+    cin>>x;
+    y = cos(x);
+    mans_sinuss(x);
+
+    cout<<endl<<"            500"
+        <<endl<<"           ___"
+        <<endl<<"           \\              k   2*k"
+        <<endl<<"            \\         (-1) * x"
+        <<endl<<"sin("<<fixed<<setprecision(2)<<x<<") = >  __________"
+        <<endl<<"            /"
+        <<endl<<"           /"
+        <<endl<<"          /___         (2*k)!"
+        <<endl<<"            k=0"
+        <<endl
+        <<endl<<"                                       2"
+        <<endl<<"                               (-1) * x"
+        <<endl<<"rekurences reizinatajs:  ________"
+        <<endl
+        <<endl<<"                            k * 2 * (2*k+1)";
+    return 0;
+}
